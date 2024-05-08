@@ -10,16 +10,18 @@
                     <form action="{% url 'core:calculate' %}">
                         <input type="text" placeholder="Masukkan ordo matriks" name="n">
                         <button class="btn" type="submit">Confirm</button>
+                        <button class="btn">Panduan</button>
                     </form>
-                    <button class="btn">Panduan</button>
                 </div>
 
             <form action="{% url 'core:calculate' %}?n={{ n }}" method="POST">
                 {% csrf_token %}
                     <div class="box w-full p-3">
-                        <input type="text" name="{{ i }}" class="w-full mb-2 " disabled placeholder="result">
-                        
-                        <div class="class=pb-6 grid grid-cols-{{ n }} gap-1 justify-items-center">
+                        <div class="flex items-center">
+                            <label for="{{ i }}" class="w-24 inline-block">Determinan: </label>
+                            <input type="text" name="{{ i }}" class="flex-1 mb-2" disabled placeholder="result" {% if result %}value="{{ result }}"{% endif %}>
+                        </div>
+                        <div class="pb-6 grid grid-cols-{{ n }} gap-1 justify-items-center">
                         {% for i in n_cells %}
                         <div>
                             <input type="number" name="{{ i }}" class="w-full">
@@ -34,20 +36,7 @@
 
                 </form>
             </div>
-        </section>
-
-          <div class="container">
-              <div class="main">
-                  
-                  {% if result %}
-                      
-                    <p>{{ result }}</p>
-                          
-                  {% endif %}
-                      
-      
-              </div>
-          </div>        
+        </section>  
     </div>
 
     <script>
