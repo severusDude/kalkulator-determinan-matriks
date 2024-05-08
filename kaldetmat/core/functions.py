@@ -4,8 +4,8 @@ from scipy.linalg import lu
 from fractions import Fraction
 
 
-def find_determinant(matrix: list) -> list:
-    result = []
+def find_determinant(matrix: list) -> int:
+    result = 0
 
     matrix_size = len(matrix)
 
@@ -21,12 +21,11 @@ def find_determinant(matrix: list) -> list:
                 "ad": a1*b2,
                 "bc": a2*b1
             }
-            result.append(step1)
 
             # step 2, calculate result
             step2 = step1["ad"]-step1["bc"]
 
-            result.append(round(step2, 2))
+            result = round(step2, 2)
 
         case 3:
             a1 = matrix[0][0]
@@ -48,17 +47,23 @@ def find_determinant(matrix: list) -> list:
                 "bdi": a2*b1*c3,
                 "afh": a1*b3*c2
             }
-            result.append(step1)
 
             # step 2, calculate result
             step2 = step1["aei"]+step1["bfg"]+step1["cdh"] - \
                 step1["ceg"]-step1["bdi"]-step1["afh"]
 
-            result.append(round(step2, 2))
+            result = round(step2, 2)
 
         case _:
             pass
 
     return result
+
+
+def determinant(matrix: list) -> int:
+    """Calculate the matrix determinant of order of n using LU decomposition method"""
+    lu, piv = scipy.linalg.lu_factor(matrix)
+
+    return round(np.prod(np.diag(lu)), 2)
 
 
