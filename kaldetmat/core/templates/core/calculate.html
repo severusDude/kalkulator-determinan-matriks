@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculation Result</title>
+    <title>Calculator | Order {{ n }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <div class="pb-6 grid grid-cols-3 gap-3 bg-gray-100">
+        <form action="{% url 'core:calculate' %}?n={{ n }}" method="POST">
+            {% csrf_token %}
+            
+            {% for i in n_cells %}
+                <input type="number" name="{{ i }}" class="w-full py-2 px-4 border rounded-xl">
+            {% endfor %}
+
+            <input class="mt-2 py-4 px-6 text-lg bg-teal-500 text-white rounded-xl" type="submit" value="OK">
+
+        </form>
+
+        
+    </div>
     <div class="container">
         <div class="main">
-            div.
+            
+            {% if result %}
+                
+                {% for step in result %}
+                    <p>{{ step }}</p>
+                {% endfor %}
+                    
+            {% endif %}
+                
+
         </div>
     </div>
 </body>
