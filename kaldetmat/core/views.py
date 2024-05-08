@@ -30,7 +30,7 @@ def calculate(request, result=[]):
                 data.append(temp.copy())
                 temp.clear()
 
-        result = functions.find_determinant(data)
+        result = functions.determinant(data)
 
         # this is the only way to redirect while also passing context
         request.method = "GET"  # to prevent infinite loop
