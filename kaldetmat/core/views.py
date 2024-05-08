@@ -5,7 +5,7 @@ from django.views.decorators.http import require_http_methods
 from . import functions
 
 # Create your views here.
-
+app_name = "core"
 
 @require_http_methods(['GET', ])
 def index(request):
