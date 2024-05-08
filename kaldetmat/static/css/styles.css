@@ -8,6 +8,30 @@ nav {
   background-color: #FFECEC;
 }
 
+nav ul li a {
+  color: #4a4646;
+  transition: ease-in .1s;
+}
+
+nav ul li a.active {
+  color: #fe965c !important;
+}
+
+nav ul li a:hover {
+  color: #fe965c !important;
+}
+nav ul li a {
+  color: #4a4646;
+  transition: ease-in .1s;
+}
+
+.active {
+  color: #fe965c !important;
+}
+
+nav ul li a:hover {
+  color: #fe965c !important;
+}
 .box {
   /* width: 400px;
   height: 400px;
@@ -19,7 +43,7 @@ nav {
 
 input[type=number], input[type=text] {
   background-color: #FFEFEF;
-  border: 1px solid #a4a4a4;
+  border: 1px solid #999999;
   border-radius: 5px;
 }
 
@@ -49,9 +73,11 @@ footer {
     left: 0; */
   }
   .member {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     width: 100%;
+
+    background-color: #999999;
   }
 
   textarea {

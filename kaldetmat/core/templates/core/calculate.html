@@ -1,31 +1,38 @@
 {% extends 'core/base.html' %} 
+{% block title %}
+    Calculate
+{% endblock title %}
+
 {% block content %} 
-        <section class="mt-20 ">
+        <section class="mt-20">
+            <div class="flex justify-center">
             <form action="{% url 'core:calculate' %}?n={{ n }}" method="POST">
                 {% csrf_token %}
-                <div class="box w-2/3 p-3">
-                    
-                    <div class="class=pb-6 grid grid-cols-{{ n }} gap-2 justify-items-center">
-                    {% for i in n_cells %}
-                    <div>
-                        <input type="number" name="{{ i }}" class="w-full">
+                    <div class="mb-2">
+                        <input type="text" placeholder="Masukkan ordo matriks">
+                        <button class="btn">Confirm</button>
+                        <button class="btn">Panduan</button>
                     </div>
-                    {% endfor %}
+                    <div class="box w-full p-3">
+                        <input type="text" name="{{ i }}" class="w-full mb-2 " disabled placeholder="result">
+                        
+                        <div class="class=pb-6 grid grid-cols-{{ n }} gap-1 justify-items-center">
+                        {% for i in n_cells %}
+                        <div>
+                            <input type="number" name="{{ i }}" class="w-full">
+                        </div>
+                        {% endfor %}
+                </div>
+
+                <button class="btn" id="submit" type="submit">Hitung</button>
+                </div>
+
+
+
+                </form>
             </div>
-
-
-                <input class="py-4 px-6 text-lg bg-teal-500 text-white rounded-xl mx-auto" type="submit" value="OK">
-            </div>
-
-
-
-            </form>
         </section>
 
-        <section class="mt-20">
-            
-          </section>
-        
           <div class="container">
               <div class="main">
                   
@@ -41,5 +48,11 @@
               </div>
           </div>        
     </div>
+
+    <script>
+        let btn = document.getElementById("submit");
+    </script>
+
+
 
 {% endblock content %}

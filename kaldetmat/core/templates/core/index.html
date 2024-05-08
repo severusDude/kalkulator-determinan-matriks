@@ -1,8 +1,10 @@
 {% extends 'core/base.html' %}  
-  
+{% block title %}
+    Home
+{% endblock title %}  
 
-    
-    
+
+<!-- start carousel -->
 <div id="default-carousel" class="relative w-full" data-carousel="slide" style="background-color: gray;">
       <!-- Carousel wrapper -->
       <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -71,29 +73,33 @@
           </svg>
           <span class="sr-only">Next</span>
       </span>
+       
     </button>
 </div>
-  
-{% block content %} 
-<section class="flex justify-center items-center flex-col mt-5">
-  <h3 class="m-3 text-3xl font-bold dark:text-white" style="font-family: 'Inter'; color: #000000;">About</h3>
+<!-- end carousel -->
+
+
+{% block content %}
+<section class="mt-20">
+  <div class="w-11/12 flex justify-center items-center flex-col mx-auto md:11/12">
+    <h2 class="md:text-3xl font-bold dark:text-white font-bold dark:text-white text-2xl" style="font-family: 'Inter'; color: #000000;">About</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro reprehenderit magni sit quod, exercitationem nesciunt ipsam tenetur sed. Totam quidem perferendis perspiciatis culpa? Nam nisi dicta labore nemo dolores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nulla reprehenderit dolores exercitationem, nobis odit neque! In voluptatem hic eos placeat ab error debitis dolorum velit dolore voluptates, expedita tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nostrum rerum, debitis ex, laudantium ratione dolore nam, impedit similique dolores voluptatem. Aspernatur ad praesentium aliquid saepe? Unde voluptas sapiente vero!</p>
     <button class="btn mx-auto">Calculator</button>
+  </div>
 </section>
-
 
 <section class="mt-20">
     <div class="flex flex-wrap">
-      <div class="lg:w-9/12 p-10" style="background-color: #fe965c;">
-        <h1>Kenapa Perlu Determinan Matriks</h1>
+      <div class="md:w-9/12 p-10">
+        <h3 class="text-3xl font-bold sm:2xl">Kenapa Perlu Determinan Matriks</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sed rem itaque qui laborum vitae distinctio excepturi fugiat suscipit nulla quam reiciendis voluptates, id, deleniti debitis adipisci ipsa beatae numquam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel, reprehenderit officiis, omnis temporibus doloribus corrupti mollitia architecto in placeat nihil nam aut maxime voluptate non ratione est obcaecati velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, modi distinctio! Aperiam, blanditiis? Debitis voluptatum ea aliquid, repudiandae corporis rerum architecto inventore laboriosam beatae. Repellat laudantium distinctio optio dolor ad?</p>
       </div>
-      <div class="lg:w-3/12" style="background-color: #926852;"><img src="static/assets/study.jpg" alt=""></div>
+      <div class="md:w-3/12" style="background-color: #926852;"><img src="static/assets/study.jpg" alt=""></div>
     </div>
 </section>
 
 <section class="mt-20">
-  <h3 class="m-3 text-3xl font-bold dark:text-white text-center" style="font-family: 'Inter'; color: #000000;">Langkah Penyelesaian Determinan Matriks</h3>
+  <h3 class="m-3 text-3xl font-bold dark:text-white sm:text:center md:text-center" style="font-family: 'Inter'; color: #000000;">Langkah Penyelesaian Determinan Matriks</h3>
   <div class="px-5 mx-auto flex flex-wrap justify-center">
     <div class="h-full p-4 lg:w-1/3">
       <div class="box px-8 pt-16 pb-16 relative">
@@ -113,34 +119,38 @@
 </section>
 
 <!-- about us -->
-<section class="mt-20">
+<section class="mt-20" id="about">
   <h3 class="m-3 text-3xl font-bold dark:text-white text-center" style="font-family: 'Inter'; color: #000000;">About Us</h3>
   <div class="w-3/4 px-5 mx-auto flex flex-wrap justify-center">
     <div class="h-full p-4 lg:w-1/3">
       <div class="box relative">
         <!-- <img src="https://placehold.co/300x300/png" alt=""> -->
-        <img src="static/assets/1.png" alt="" class="member">
+        <img src="static/assets/1.2.png" alt="" class="member">
       </div>
+      <!-- <div class="identity flex justify-center flex-col items-center">
+        <p>Luthfi Fajar</p>
+        <p>237006</p>
+      </div> -->
     </div>
     <div class="h-full p-4 lg:w-1/3">
       <div class="box relative">
         
-        <img src="static/assets/2.jpg" alt="" class="member">
+        <img src="static/assets/2.1.jpg" alt="" class="member">
       </div>
     </div>
     <div class="h-full p-4 lg:w-1/3">
       <div class="box relative">
-        <img src="static/assets/3.jpg" alt="" class="member">
-      </div>
-    </div>
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box pb-16 relative">
-        <img src="https://placehold.co/300x300/png" alt="">
+        <img src="static/assets/3.1.jpg" alt="" class="member">
       </div>
     </div>
     <div class="h-full p-4 lg:w-1/3">
       <div class="box relative">
-        <img src="static/assets/5.jpg" alt="" class="member">
+        <img src="static/assets/4.jpg" alt="" class="member">
+      </div>
+    </div>
+    <div class="h-full p-4 lg:w-1/3">
+      <div class="box relative">
+        <img src="static/assets/5.1.jpg" alt="" class="member">
       </div>
     </div>
     
