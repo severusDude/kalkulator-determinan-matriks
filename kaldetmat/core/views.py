@@ -12,6 +12,11 @@ def index(request):
 
     return render(request, 'core/index.html')
 
+@require_http_methods(['GET', ])
+def calculateForm(request):
+
+    return render(request, 'core/calculate.html')
+
 
 @require_http_methods(['GET', 'POST', ])
 def calculate(request, result=[]):
