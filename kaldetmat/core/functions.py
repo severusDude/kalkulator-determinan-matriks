@@ -1,6 +1,6 @@
 import string
 import numpy as np
-from scipy.linalg import lu
+import scipy
 from fractions import Fraction
 
 
