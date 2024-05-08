@@ -1,61 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/index.css">
-</head>
-<style>
+{% extends 'core/base.html' %}  
   
-  
-  </style>
-<body>
-  
-  
-  <!-- <div class="md:mx-auto"> -->
-  <nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">calDetMat</span>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Calculator</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Quiz</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    </nav>
+
     
     
-    
-    <div id="default-carousel" class="relative w-full" data-carousel="slide" style="background-color: gray;">
+<div id="default-carousel" class="relative w-full" data-carousel="slide" style="background-color: gray;">
       <!-- Carousel wrapper -->
       <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
         <!-- Item 1 -->
@@ -124,17 +72,17 @@
           <span class="sr-only">Next</span>
       </span>
     </button>
-  </div>
+</div>
   
-  <div class="container mx-auto">
-  <section class="flex justify-center items-center flex-col mt-5">
-    <h3 class="m-3 text-3xl font-bold dark:text-white" style="font-family: 'Inter'; color: #000000;">About</h3>
+{% block content %} 
+<section class="flex justify-center items-center flex-col mt-5">
+  <h3 class="m-3 text-3xl font-bold dark:text-white" style="font-family: 'Inter'; color: #000000;">About</h3>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro reprehenderit magni sit quod, exercitationem nesciunt ipsam tenetur sed. Totam quidem perferendis perspiciatis culpa? Nam nisi dicta labore nemo dolores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nulla reprehenderit dolores exercitationem, nobis odit neque! In voluptatem hic eos placeat ab error debitis dolorum velit dolore voluptates, expedita tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nostrum rerum, debitis ex, laudantium ratione dolore nam, impedit similique dolores voluptatem. Aspernatur ad praesentium aliquid saepe? Unde voluptas sapiente vero!</p>
     <button class="btn mx-auto">Calculator</button>
-  </section>
+</section>
 
 
-  <section class="mt-20">
+<section class="mt-20">
     <div class="flex flex-wrap">
       <div class="lg:w-9/12 p-10" style="background-color: #fe965c;">
         <h1>Kenapa Perlu Determinan Matriks</h1>
@@ -142,7 +90,7 @@
       </div>
       <div class="lg:w-3/12" style="background-color: #926852;"><img src="static/assets/study.jpg" alt=""></div>
     </div>
-  </section>
+</section>
 
 <section class="mt-20">
   <h3 class="m-3 text-3xl font-bold dark:text-white text-center" style="font-family: 'Inter'; color: #000000;">Langkah Penyelesaian Determinan Matriks</h3>
@@ -203,14 +151,14 @@
 <section class="mt-20">
   <h3 class="m-3 text-3xl font-bold dark:text-white text-center" style="font-family: 'Inter'; color: #000000;">Feedback</h3>
   
-<div class="w-2/3 p-7 h-full box mx-auto">
-  <p>Beritahu kami tentang pengalaman anda saat menggunakan . Kritik dan saran anda akan sangat membantu kami.</p>
-  <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-    <label for="comment" class="sr-only">Your comment</label>
-    <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required ></textarea>
+  <div class="w-2/3 p-7 h-full box mx-auto">
+    <p>Beritahu kami tentang pengalaman anda saat menggunakan . Kritik dan saran anda akan sangat membantu kami.</p>
+    <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+      <label for="comment" class="sr-only">Your comment</label>
+      <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required ></textarea>
+    </div>
+    <button class="btn">Kirim</button>
   </div>
-  <button class="btn">Kirim</button>
-</div>
 
 </section>
 
@@ -224,99 +172,4 @@
 
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<footer>
-  <div class="footer-content flex justify-center items-center flex-col mt-36">
-    <ul class="flex gap-6">
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Contact</li>
-          <li>Feedback</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  </body>
-  </html>
+{% endblock content %}

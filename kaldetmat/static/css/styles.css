@@ -1,6 +1,6 @@
 body {
     background-color: #ffe0ce;
-    height: 100vh;
+    /* height: 100vh; */
     /* position: relative; */
   }
 
@@ -34,9 +34,9 @@ body {
 
 
   footer {
-    position: fixed;
-  bottom: 0;
-  left: 0;
+    /* position: fixed;
+    bottom: 0;
+    left: 0; */
   }
   .member {
     width: 300px;
