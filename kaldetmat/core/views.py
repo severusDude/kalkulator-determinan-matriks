@@ -32,9 +32,6 @@ def calculate(request, result=[]):
 
         result = functions.find_determinant(data)
 
-        if len(result) == 0:
-            return HttpResponseBadRequest()
-
         # this is the only way to redirect while also passing context
         request.method = "GET"  # to prevent infinite loop
         response = calculate(request, result=result)
