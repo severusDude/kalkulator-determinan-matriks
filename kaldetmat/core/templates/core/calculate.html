@@ -5,14 +5,17 @@
 
 {% block content %} 
         <section class="mt-20">
-            <div class="flex justify-center">
+            <div class="">
+                <div class="mb-2">
+                    <form action="{% url 'core:calculate' %}">
+                        <input type="text" placeholder="Masukkan ordo matriks" name="n">
+                        <button class="btn" type="submit">Confirm</button>
+                    </form>
+                    <button class="btn">Panduan</button>
+                </div>
+
             <form action="{% url 'core:calculate' %}?n={{ n }}" method="POST">
                 {% csrf_token %}
-                    <div class="mb-2">
-                        <input type="text" placeholder="Masukkan ordo matriks">
-                        <button class="btn">Confirm</button>
-                        <button class="btn">Panduan</button>
-                    </div>
                     <div class="box w-full p-3">
                         <input type="text" name="{{ i }}" class="w-full mb-2 " disabled placeholder="result">
                         
