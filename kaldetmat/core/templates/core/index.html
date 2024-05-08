@@ -10,41 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" > -->
+    <link rel="stylesheet" href="static/css/index.css">
 </head>
 <style>
-  body {
-    background-color: #ffe0ce;
-    height: 100vh;
-  }
-
-  .box {
-    /* width: 400px;
-    height: 400px;
-    padding: 20px; */
-    background-color: #FFEADE;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
-  }
-
-  .btn {
-    border-radius: 5px;
-    background-color: #fe965c;
-    width: 95px;
-    height:40px;
-    color: #ffffff;
-    font-weight: 400;
-    margin-top: 10px;
-  }
-
-  .footer-content {
-    background-color: #ffffff;
-    height: 150px;
-  }
-
-  .container {
-    height: 100vh;
-  }
+  
   
   </style>
 <body>
@@ -91,7 +60,7 @@
       <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
         <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <img src="static/assets/carousel-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           <div style="background-color: rgb(181, 40, 171);" class="w-full h-full flex justify-center items-center flex-col p-20">
             <h1 class="mdx:text-3xl text-xl">Determinan Matriks</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
@@ -164,13 +133,14 @@
     <button class="btn mx-auto">Calculator</button>
   </section>
 
+
   <section class="mt-20">
     <div class="flex flex-wrap">
-      <div class="lg:w-9/12" style="background-color: #fe965c;">
+      <div class="lg:w-9/12 p-10" style="background-color: #fe965c;">
         <h1>Kenapa Perlu Determinan Matriks</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sed rem itaque qui laborum vitae distinctio excepturi fugiat suscipit nulla quam reiciendis voluptates, id, deleniti debitis adipisci ipsa beatae numquam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel, reprehenderit officiis, omnis temporibus doloribus corrupti mollitia architecto in placeat nihil nam aut maxime voluptate non ratione est obcaecati velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, modi distinctio! Aperiam, blanditiis? Debitis voluptatum ea aliquid, repudiandae corporis rerum architecto inventore laboriosam beatae. Repellat laudantium distinctio optio dolor ad?</p>
       </div>
-      <div class="lg:w-3/12" style="background-color: #926852;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla cum atque culpa inventore dignissimos quia modi iste earum possimus, deleniti, dolore enim debitis labore recusandae sapiente itaque ea quod!</div>
+      <div class="lg:w-3/12" style="background-color: #926852;"><img src="static/assets/study.jpg" alt=""></div>
     </div>
   </section>
 
@@ -199,8 +169,20 @@
   <h3 class="m-3 text-3xl font-bold dark:text-white text-center" style="font-family: 'Inter'; color: #000000;">About Us</h3>
   <div class="w-3/4 px-5 mx-auto flex flex-wrap justify-center">
     <div class="h-full p-4 lg:w-1/3">
-      <div class="box pb-16 relative">
-        <img src="https://placehold.co/300x300/png" alt="">
+      <div class="box relative">
+        <!-- <img src="https://placehold.co/300x300/png" alt=""> -->
+        <img src="static/assets/1.png" alt="" class="member">
+      </div>
+    </div>
+    <div class="h-full p-4 lg:w-1/3">
+      <div class="box relative">
+        
+        <img src="static/assets/2.jpg" alt="" class="member">
+      </div>
+    </div>
+    <div class="h-full p-4 lg:w-1/3">
+      <div class="box relative">
+        <img src="static/assets/3.jpg" alt="" class="member">
       </div>
     </div>
     <div class="h-full p-4 lg:w-1/3">
@@ -209,18 +191,8 @@
       </div>
     </div>
     <div class="h-full p-4 lg:w-1/3">
-      <div class="box pb-16 relative">
-        <img src="https://placehold.co/300x300/png" alt="">
-      </div>
-    </div>
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box pb-16 relative">
-        <img src="https://placehold.co/300x300/png" alt="">
-      </div>
-    </div>
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box pb-16 relative">
-        <img src="https://placehold.co/300x300/png" alt="">
+      <div class="box relative">
+        <img src="static/assets/5.jpg" alt="" class="member">
       </div>
     </div>
     
@@ -235,7 +207,7 @@
   <p>Beritahu kami tentang pengalaman anda saat menggunakan . Kritik dan saran anda akan sangat membantu kami.</p>
   <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
     <label for="comment" class="sr-only">Your comment</label>
-    <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required ></textarea>
+    <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required ></textarea>
   </div>
   <button class="btn">Kirim</button>
 </div>
