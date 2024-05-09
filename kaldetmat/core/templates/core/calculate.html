@@ -16,7 +16,7 @@
 
             <form action="{% url 'core:calculate' %}?n={{ n }}" method="POST">
                 {% csrf_token %}
-                    <div class="box md:w-2/4 p-3 mx-auto w-11/12" >
+                    <div class="box hidden md:w-2/4 p-3 mx-auto w-11/12" id="show-calculator">
                         <div class="flex items-center mb-2">
                             <input type="text" name="{{ i }}" class="w-full" disabled placeholder="determinant result" {% if result %}value="{{ result }}"{% endif %}>
                         </div>
@@ -43,12 +43,14 @@
     <script>
         let confirm= document.getElementById("confirm");
         let showGrid = document.getElementById("show-grid");
+        let showCalculator = document.getElementById("show-calculator");
         let ordo = document.getElementById("ordo");
         
         confirm.addEventListener("click", function(e) {
             e.preventDefault()
-            showGrid.classList.add("show");
-            ordo.classList.add("ordo-hidden")      
+            // showGrid.classList.add("show");
+            // ordo.classList.add("ordo-hidden") 
+            showCalculator.classList.remove("hidden");     
         })
     </script>
 
