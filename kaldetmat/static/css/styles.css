@@ -1,5 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: #ffe0ce;
+    height: 100vh;
     /* height: 100vh; */
     /* position: relative; */
   }
@@ -41,8 +46,40 @@ nav ul li a:hover {
   box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
 }
 
+.relative {
+  overflow: hidden !important;
+}
 .img {
   border-radius: 10px !important;
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  /* background: linear-gradient(transparent, #D0A085 90%); */
+  background-color: #D0A085;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+
+/* .overlay-text {
+  position: fixed;
+  bottom: 0;
+} */
+
+.box:hover .overlay {
+  height: 100%;
 }
 
 
@@ -52,13 +89,17 @@ input[type=number], input[type=text] {
   border-radius: 5px;
 }
 
-.hidden {
-  display: none !important;
+.calculator-hidden {
+  /* display: none !important; */
+  transform: translateY(-3%);
+  opacity: 0 !important;
+  transition: ease-in .2s;
 }
 
 
-.show {
-  display: grid !important;
+.calculator-show {
+  transform: translateY(0);
+  opacity: 1 !important;
 }
 
 
