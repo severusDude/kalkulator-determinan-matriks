@@ -4,6 +4,10 @@
 {% endblock title %}  
 
 
+
+{% block content %}  
+
+<!-- start carousel -->
 <div id="default-carousel" class="relative w-full" data-carousel="slide" style="background-color: gray;">
   <!-- Carousel wrapper -->
   <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -75,15 +79,13 @@
    
 </button>
 </div>
-{% block content %}  
-<!-- start carousel -->
-   
 <!-- end carousel -->
 
+<div class="md:container mx-auto flex-1 py-10">
 <section class="mt-20">
   <div class="w-3/4 md:w-11/12 lg:w-11/12 flex justify-center items-center flex-col mx-auto">
-    <h2 class="md:text-3xl font-bold dark:text-white font-bold dark:text-white text-2xl" style="font-family: 'Inter'; color: #000000;">About</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro reprehenderit magni sit quod, exercitationem nesciunt ipsam tenetur sed. Totam quidem perferendis perspiciatis culpa? Nam nisi dicta labore nemo dolores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nulla reprehenderit dolores exercitationem, nobis odit neque! In voluptatem hic eos placeat ab error debitis dolorum velit dolore voluptates, expedita tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nostrum rerum, debitis ex, laudantium ratione dolore nam, impedit similique dolores voluptatem. Aspernatur ad praesentium aliquid saepe? Unde voluptas sapiente vero!</p>
+    <h2 class="md:text-3xl font-bold dark:text-white font-bold dark:text-white text-2xl" style="font-family: 'Inter'; color: #000000;">Apa Itu Determinan Matriks?</h2>
+    <p>Di dalam bidang materi al jabar linear, determinan ialah sebuah nilai yang dapat dihitung dari unsur suatu matriks persegi. Dengan antarmuka yang intuitif, Anda dapat dengan cepat menghitung determinan matriks dengan berbagai ukuran, dari matriks 2x2 hingga matriks 3x3, serta matriks dengan ordo yang lebih besar. Dengan Kalkulator Determinan, Anda dapat menghemat waktu dan usaha dalam menyelesaikan masalah matematika yang melibatkan determinan matriks.</p>
   </div>
 </section>
 
@@ -91,7 +93,12 @@
     <div class="flex flex-wrap">
       <div class="md:w-8/12 p-10">
         <h3 class="text-3xl font-bold sm:2xl">Kenapa Perlu Determinan Matriks</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sed rem itaque qui laborum vitae distinctio excepturi fugiat suscipit nulla quam reiciendis voluptates, id, deleniti debitis adipisci ipsa beatae numquam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel, reprehenderit officiis, omnis temporibus doloribus corrupti mollitia architecto in placeat nihil nam aut maxime voluptate non ratione est obcaecati velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, modi distinctio! Aperiam, blanditiis? Debitis voluptatum ea aliquid, repudiandae corporis rerum architecto inventore laboriosam beatae. Repellat laudantium distinctio optio dolor ad?</p>
+        <!-- <div class="flex flex-col"> -->
+          <p>Belajar determinan matriks penting karena memiliki banyak aplikasi dalam berbagai bidang, seperti ilmu komputer, matematika dan fisika. Salah satu alasan utamanya adalah kemampuannya dalam menentukan apakah sebuah matriks bisa diinvers atau tidak, serta menyelesaikan sistem persamaan linear.</p>
+          <p>Determinan matriks juga penting dalam geometri, memungkinkan perhitungan luas, volume, dan properti geometris lainnya dari objek yang diwakili oleh matriks. Misalnya, dapat digunakan untuk menghitung volume prisma yang dibentuk oleh tiga vektor dalam tiga dimensi.</p>
+        <!-- </div> -->
+          <p>Belajar determinan matriks membuka pintu untuk memahami konsep lebih lanjut dalam aljabar linear, seperti eigenvalues, eigenvectors, dan transformasi linear. Hal ini menjadi dasar penting dalam memahami aplikasi matematika yang lebih kompleks, seperti pemrosesan sinyal, machine learning, dan analisis optimasi.
+          </p>
       </div>
       <div class="md:w-3/12 img" style="background-color: #926852;">
         <img src="static/assets/study.jpg" alt="">
@@ -103,17 +110,22 @@
   <h3 class="m-3 text-3xl font-bold dark:text-white sm:text:center md:text-center" style="font-family: 'Inter'; color: #000000;">Langkah Penyelesaian Determinan Matriks</h3>
   <div class="px-5 mx-auto flex flex-wrap justify-center">
     <div class="h-full p-4 lg:w-1/3">
-      <div class="box px-8 pt-16 pb-16 relative">
+      <div class="box px-8 py-6 relative">
         <h1 class="title-font sm:text-2xl text-xl  mb-3">Matriks 2x2</h1>
-        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint eveniet impedit doloribus illo ullam aut est delectus, obcaecati similique consequuntur eum ab sed qui minima! Quidem earum exercitationem repudiandae nemo.</p>
-        <button class="btn">Coba</button>
+        <p class="mb-2">Matriks ini terdiri dari dua baris dan dua kolom. Matriks ordo 2x2, determinannya dihitung dengan cara mengalikan diagonal utama dan mengurangkan hasil perkalian diagonal kedua. Rumus determinan matriks ordo 2x2 sangat sederhana dan mudah dipahami, sehingga sering digunakan dalam berbagai aplikasi matematika dan ilmu terapan.</p>
+        <a href="{% url 'core:calculate' %}">
+          <button class="btn">Coba</button>
+        </a>
       </div>
     </div>
     <div class="h-full p-4 lg:w-1/3">
-      <div class="box px-8 pt-16 pb-16 relative">
+      <div class="box px-8 py-6 relative h-100">
         <h1 class="title-font sm:text-2xl text-xl mb-3">Matriks 3x3</h1>
-        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, sequi vel obcaecati eius soluta cum voluptates qui saepe excepturi perspiciatis culpa reiciendis alias rem repudiandae harum odit laborum non molestiae!</p>
-        <button class="btn">Coba</button>
+        <p class="mb-2">Matriks ordo 3x3 adalah matriks yang memiliki tiga baris dan tiga kolom. Determinannya dapat dihitung dengan metode ekspansi kofaktor, di mana setiap elemen matriks dikalikan dengan kofaktornya dan dijumlahkan. Hasilnya sering digunakan dalam menyelesaikan sistem persamaan linear dan pemodelan geometri.
+        </p>
+        <a href="{% url 'core:calculate' %}">
+          <button class="btn">Coba</button>
+        </a>
       </div>
     </div>
   </div>
@@ -127,31 +139,47 @@
       <div class="box relative">
         <!-- <img src="https://placehold.co/300x300/png" alt=""> -->
         <img src="static/assets/1.2.png" alt="" class="member">
+        <div class="overlay">
+          <div class="overlay-text"></div>
+          <p>Luthfi Fajar</p>
+          <p>237006</p>
+        </div>
       </div>
-      <!-- <div class="identity flex justify-center flex-col items-center">
-        <p>Luthfi Fajar</p>
-        <p>237006</p>
-      </div> -->
     </div>
     <div class="h-full p-4 lg:w-1/3">
       <div class="box relative">
-        
         <img src="static/assets/2.1.jpg" alt="" class="member">
+        <div class="overlay">
+          <p>Febrian</p>
+          <p>237006</p>
+        </div>
       </div>
     </div>
     <div class="h-full p-4 lg:w-1/3">
       <div class="box relative">
         <img src="static/assets/3.1.jpg" alt="" class="member">
+        <div class="overlay">
+          <p>Rafli</p>
+          <p>237006</p>
+        </div>
       </div>
     </div>
     <div class="h-full p-4 lg:w-1/3">
       <div class="box relative">
         <img src="static/assets/4.jpg" alt="" class="member">
+        <div class="overlay">
+          <p>Bunga</p>
+          <p>237006</p>
+        </div>
       </div>
     </div>
     <div class="h-full p-4 lg:w-1/3">
       <div class="box relative">
         <img src="static/assets/5.1.jpg" alt="" class="member">
+        <div class="overlay">
+          <p>Iqbal</p>
+          <p>237006</p>
+        </div>
       </div>
     </div>
     
@@ -159,7 +187,7 @@
 </section>
 
 <!-- feedback -->
-<section class="mt-20">
+<section class="mt-20" id="feedback">
   <h3 class="m-3 text-3xl font-bold dark:text-white text-center" style="font-family: 'Inter'; color: #000000;">Feedback</h3>
   
   <div class="w-2/3 p-7 h-full box mx-auto">
@@ -172,14 +200,6 @@
   </div>
 
 </section>
-
-
-
-
-
-
-
-
 
 </div>
 
