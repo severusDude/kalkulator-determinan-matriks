@@ -9,18 +9,18 @@
                 <div class="mb-2 mx-auto">
                     <form action="{% url 'core:calculate' %}">
                         <input type="text" placeholder="Masukkan ordo matriks" name="n">
-                        <button class="btn" type="submit">Confirm</button>
+                        <button class="btn" type="submit" id="confirm">Confirm</button>
                         <button class="btn">Panduan</button>
                     </form>
                 </div>
 
             <form action="{% url 'core:calculate' %}?n={{ n }}" method="POST">
                 {% csrf_token %}
-                    <div class="box md:w-2/4 p-3 mx-auto w-11/12">
+                    <div class="box md:w-2/4 p-3 mx-auto w-11/12" >
                         <div class="flex items-center mb-2">
                             <input type="text" name="{{ i }}" class="w-full" disabled placeholder="determinant result" {% if result %}value="{{ result }}"{% endif %}>
                         </div>
-                        <div class="pb-6 grid grid-cols-{{ n }} gap-4 justify-items-center" id="hidden" >
+                        <div class="pb-6 grid grid-cols-{{ n }} gap-4 justify-items-center" id="show-grid" >
                         {% for i in n_cells %}
                         <div class="w-full">
                             <input type="number" name="{{ i }}" class="w-full">
@@ -28,6 +28,8 @@
                         {% endfor %}
                 </div>
 
+                <div class=""></div>
+                <p class="text-center ordo" id="ordo">Silahkan Masukkan Ordo Terlebih dahulu</p>
                 <button class="btn" id="submit" type="submit">Hitung</button>
                 </div>
 
@@ -39,7 +41,15 @@
     </div>
 
     <script>
-        let btn = document.getElementById("submit");
+        let confirm= document.getElementById("confirm");
+        let showGrid = document.getElementById("show-grid");
+        let ordo = document.getElementById("ordo");
+        
+        confirm.addEventListener("click", function(e) {
+            e.preventDefault()
+            showGrid.classList.add("show");
+            ordo.classList.add("ordo-hidden")      
+        })
     </script>
 
 
