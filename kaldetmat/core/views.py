@@ -61,9 +61,11 @@ def feedback(request):
     token = os.getenv("TOKEN")
     chat_id = os.getenv("CHAT_ID")
 
+    # get post request from form html
     message = request.POST['feedback']
-    url = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={message}"
 
+    # send message with telegram API
+    url = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={message}"
     if(requests.get(url)): 
         alert = "Terima kasih atas feedback Anda"
     else:
