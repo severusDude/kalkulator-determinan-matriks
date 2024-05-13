@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,15 +8,14 @@ body {
     background-color: #ffe0ce;
     height: 100vh;
     height: 100%;
-    /* height: 100vh; */
-    /* position: relative; */
+    font-family: 'Kulim Park';
   }
-
-nav {
-  background-color: #FFECEC;
-}
-
-nav ul li a {
+  
+  nav {
+    background-color: #FFECEC;
+  }
+  
+  nav ul li a {
   color: #4a4646;
   transition: ease-in .1s;
 }
@@ -47,7 +48,13 @@ nav ul li a:hover {
 .carousel-wrapper div:nth-child(1){
   background-image: url('/static/assets/carousel-1.jpg');
   background-size: cover;
-  /* background-position: 0 -170px; */
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.carousel-wrapper div:nth-child(2){
+  background-image: url('/static/assets/carousel.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
 }
@@ -56,12 +63,6 @@ nav ul li a:hover {
   color: #ffffff;
   font-weight: 600;
 }
-
-.carousel-wrapper div:nth-child(1) p{
-  color: #ffffff;
-  font-weight: 600;
-}
-
 
 .box {
   background-color: #FFEADE;
@@ -72,7 +73,7 @@ nav ul li a:hover {
 .relative {
   overflow: hidden !important;
 }
-.img {
+img {
   border-radius: 10px !important;
 }
 
@@ -95,16 +96,9 @@ nav ul li a:hover {
   transition: 0.5s;
 }
 
-
-/* .overlay-text {
-  position: fixed;
-  bottom: 0;
-} */
-
 .box:hover .overlay {
   height: 100%;
 }
-
 
 input[type=number], input[type=text] {
   background-color: #FFEFEF;
@@ -113,7 +107,6 @@ input[type=number], input[type=text] {
 }
 
 .calculator-hidden {
-  /* display: none !important; */
   transform: translateY(-3%);
   opacity: 0 !important;
   transition: ease-in .2s;
@@ -136,29 +129,18 @@ input[type=number], input[type=text] {
     margin-top: 10px;
 }
 
+.container {
+  height: 100vh;
+}
+
+.member {
+  width: 250px;
+  height: 250px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #999999;
+}
 .footer-content {
     background-color: #FFECEC;
     height: 150px;
-  }
-
-.container {
-    height: 100vh;
-  }
-
-
-footer {
-    /* position: fixed;
-    bottom: 0;
-    left: 0; */
-  }
-  .member {
-    width: 250px;
-    height: 250px;
-    width: 100%;
-    border-radius: 15px;
-    background-color: #999999;
-  }
-
-  /* textarea {
-    background-color: #FFEFEF;
-  } */
+}
