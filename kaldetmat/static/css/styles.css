@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+* {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,23 +49,34 @@ nav ul li a:hover {
 }
 
 
-.carousel-wrapper div:nth-child(1){
-  background-image: url('/static/assets/carousel-1.jpg');
+.carousel-wrapper > div:nth-child(1){
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('/static/assets/carousel-1.jpg'), no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
 }
 
-.carousel-wrapper div:nth-child(2){
-  background-image: url('/static/assets/carousel.jpg');
+.carousel-wrapper > div:nth-child(2){
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('/static/assets/carousel-2.jpg'), no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
 }
 
-.carousel-wrapper div:nth-child(1) h1{
-  color: #ffffff;
-  font-weight: 600;
+.carousel-wrapper > div:nth-child(3){
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('/static/assets/carousel-3.jpg'), no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.carousel-wrapper > div:nth-child(4){
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('/static/assets/carousel-4.jpg'), no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.carousel-wrapper > div:nth-child(5){
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('/static/assets/carousel-5.jpg'), no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
 .box {
@@ -135,7 +150,7 @@ input[type=number], input[type=text] {
 
 .member {
   width: 250px;
-  height: 250px;
+  height: 350px;
   width: 100%;
   border-radius: 15px;
   background-color: #999999;
@@ -143,4 +158,21 @@ input[type=number], input[type=text] {
 .footer-content {
     background-color: #FFECEC;
     height: 150px;
+}
+
+@media only screen and (max-width: 400px) {
+  .member {
+    width: 250px;
+    height: 250px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .member {
+    width: 250px;
+    height: 300px;
+    width: 100%;
+  }
+
 }
