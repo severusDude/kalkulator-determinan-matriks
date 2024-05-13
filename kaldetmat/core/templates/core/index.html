@@ -5,7 +5,6 @@
 {% endblock title %}  
 
 
-
 {% block content %}  
 
 <!-- start carousel -->
@@ -15,42 +14,41 @@
     <!-- Item 1 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
       <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
-        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">Do u now?</h1>
         <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Selamat datang di CalDetMat! Kami adalah alat yang dirancang untuk membantu Anda dalam perhitungan determinan matriks dengan mudah dan cepat.</p>
       </div>
     </div>
     <!-- Item 2 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      <div class="w-full h-full flex justify-center items-center flex-col p-20">
-        <h1>Determinan Matriks</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam </p>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Determinan matriks adalah nilai skalar yang memberikan informasi tentang sifat geometris dan aljabar matriks.</p>
       </div>
     </div>
+    
     <!-- Item 3 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      <div style="background-color: rgb(45, 209, 40); color: rgb(163, 197, 40);" class="w-full h-full flex justify-center items-center flex-col p-20">
-        <h1>Determinan Matriks</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Jika semua unsur dari suatu baris (atau kolom) adalah nol, determinan matriks itu sama dengan nol.</p>
       </div>
     </div>
+    
     <!-- Item 4 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      <div style="background-color: rgb(25, 179, 226);" class="w-full h-full flex justify-center items-center flex-col p-20">
-        <h1 style="color: azure;">Determinan Matrikss</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Jika semua unsur dari suatu baris (atau kolom) adalah nol, kecuali satu unsur, determinannya sama dengan hasil kali unsur itu dengan kofaktornya.</p>
       </div>
     </div>
     <!-- Item 5 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      <div style="background-color: rgb(220, 213, 23);" class="w-full h-full flex justify-center items-center flex-col p-20">
-        <h1>Determinan Matriks</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Pertukaran dua baris atau dua kolom sembarang akan mengubah tanda determinan.</p>
       </div>
     </div>
+    
   </div>
   <!-- Slider indicators -->
   <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -64,9 +62,12 @@
 <!-- end carousel -->
 
 <!-- alert -->
-<div class="p-4 md:w-2/4 mx-auto mt-10 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 text-center" role="alert">
-  <span class="font-medium">{{ alert }}</span>
-</div>
+<!-- success -->
+{% if alert %}
+  <div class="p-4 md:w-2/4 mx-auto mt-10 text-sm {{ alert.color }} rounded-lg {{ alert.backgroundColor }} text-center" role="alert">
+    <span class="font-medium">{{ alert.text }}</span>
+  </div>
+{% endif %}
 <!-- end alert -->
 
 <!-- container -->
