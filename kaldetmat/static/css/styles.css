@@ -5,6 +5,7 @@ html {
 body {
     background-color: #ffe0ce;
     height: 100vh;
+    height: 100%;
     /* height: 100vh; */
     /* position: relative; */
   }
@@ -37,10 +38,32 @@ nav ul li a {
 nav ul li a:hover {
   color: #fe965c !important;
 }
+
+.carousel-wrapper {
+  height: 100%;
+}
+
+
+.carousel-wrapper div:nth-child(1){
+  background-image: url('/static/assets/carousel-1.jpg');
+  background-size: cover;
+  /* background-position: 0 -170px; */
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.carousel-wrapper div:nth-child(1) h1{
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.carousel-wrapper div:nth-child(1) p{
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
 .box {
-  /* width: 400px;
-  height: 400px;
-  padding: 20px; */
   background-color: #FFEADE;
   border-radius: 15px;
   box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
@@ -136,6 +159,6 @@ footer {
     background-color: #999999;
   }
 
-  textarea {
+  /* textarea {
     background-color: #FFEFEF;
-  }
+  } */

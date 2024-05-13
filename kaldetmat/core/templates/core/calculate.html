@@ -4,20 +4,56 @@
 {% endblock title %}
 
 {% block content %} 
-    <div class="md:container mx-auto flex-1 py-10"></div>
-        <section class="mb-10 h-full">
+    <div class="md:container mx-auto flex-1 py-10">
+        <section class="mb-10">
+
+            <!-- Main modal -->
+            <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative p-4 w-full max-w-2xl max-h-full">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                Panduan
+                            </h3>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-4 md:p-5 space-y-4">
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                Panduan menggunakan kalkulator determinan matriks <br>
+                                1. Masukkan ordo matriks. (Contoh : 2) <br>
+                                2. Tekan confirm <br>
+                                3. Masukkan nilai matriks yang ingin dihitung <br>
+                                4. Tekan hitung <br>
+                                5. Hasil perhitungan determinan matriks akan muncul di atas nilai matriks
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
             <div class="flex flex-col">
-                <div class="mb-2 mx-auto">
-                    <form id="input-ordo" action="{% url 'core:calculate' %}">
+                <div class="mb-2 flex gap-1 md:w-2/4 p-3 mx-auto">
+                    <form id="input-ordo">
                         <input type="number" placeholder="Masukkan ordo matriks" name="n" id="n-ordo">
                         <button class="btn" type="submit" id="confirm">Confirm</button>
+                        <button class="btn" data-modal-target="default-modal" data-modal-toggle="default-modal" id="help" type="button">Panduan</button>
                     </form>
-                    <button class="btn" id="help">Panduan</button>
                 </div>
 
-            <form action="{% url 'core:calculate' %}?n={{ n }}" method="POST">
+                
+                
+
+            <form action="{% url 'core:calculate' %}?n={{ n }}" id="formData" method="post">
                 {% csrf_token %}
-                    <div class="box  md:w-2/4 p-3 mx-auto w-11/12" id="show-calculator">
+                    <div class="box md:w-2/4 p-3 mx-auto w-11/12" id="show-calculator">
                         <div class="flex items-center mb-2">
                             <input type="text" name="{{ i }}" class="w-full" disabled placeholder="determinant result" {% if result %}value="{{ result }}"{% endif %}>
                         </div>
@@ -30,7 +66,6 @@
                 </div>
 
                 <div class="" id="hasil"></div>
-                <!-- <p class="text-center ordo" id="ordo">Silahkan Masukkan Ordo Terlebih dahulu</p> -->
                 <button class="btn" id="submit" type="submit">Hitung</button>
                 </div>
 
@@ -40,30 +75,20 @@
     </div>
 
 
-    <!-- script buat ajax agar formnya bisa dianimasikan tanpa meload page -->
+    <!-- script buat ajax agar formnya bisa dianimasikan secara interaktif -->
+    <!-- masih ada beberapa bug -->
     <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         let confirm= document.getElementById("confirm");
         let showCalculator = document.getElementById("show-calculator");
         let ordo = document.getElementById("n-ordo")
         
-        // ketika tombol confirm diklik maka tampilkan kalkulator beserta ordonya
-        // confirm.addEventListener("click", function(e) {
-        //     e.preventDefault() 
-
-        //     // mengecek apakah ordo yang dimasukan tidak kosong
-        //     if(ordo.value !== "") {
-        //         // tampilkan kalkulator beserta ordonya
-        //         showCalculator.classList.remove("calculator-hidden");
-        //         showCalculator.classList.add("calculator-show")
-        //     };
-        // })
-
-        
-        $("#input-ordo").submit(function(e) {
+        ===== input ordo matriks =======
+        ======= GET ===========
+        $("#confirm").click(function(e) {
             e.preventDefault();
 
-                // mengecek apakah ordo yang dimasukan tidak kosong
+            // mengecek apakah ordo yang dimasukan tidak kosong
             if(ordo.value !== "") {
                 // tampilkan kalkulator beserta ordonya
                 showCalculator.classList.remove("calculator-hidden");
@@ -72,53 +97,40 @@
 
             $.ajax({
                 type: "GET",
+                url: "/calculate",
                 data: {
                     n: $("#n-ordo").val()
                 },
                 success: function(data) {
-                    
-                }
+                    $("*").replaceWith(data)
+                } 
             })
         })
-            
-    </script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        let confirm= document.getElementById("confirm");
-        let showCalculator = document.getElementById("show-calculator");
-        let ordo = document.getElementById("n-ordo")
-        
-        // ketika tombol confirm diklik maka tampilkan kalkulator beserta ordonya
-        // confirm.addEventListener("click", function(e) {
-        //     e.preventDefault() 
 
-        //     // mengecek apakah ordo yang dimasukan tidak kosong
-        //     if(ordo.value !== "") {
-        //         // tampilkan kalkulator beserta ordonya
-        //         showCalculator.classList.remove("calculator-hidden");
-        //         showCalculator.classList.add("calculator-show")
-        //     };
-        // })
-        
-        
-        $("#input-ordo").submit(function(e) {
+        ==== input matriks =====
+        ======= POST ===========
+        $("#formData").click(function(e) {
             e.preventDefault();
-
-            let formData = new FormData();
-            formData.append('')
+            let form = document.getElementById("formData");
+            let formData = new FormData(form);
 
             $.ajax({
+                url: "{% url 'core:calculate' %}?n={{ n }}",
                 type: "POST",
-                data: {
-                    n: $("#n-ordo").val()
-                },
+                data: formData,
+                processData: false,
+                contentType: false,
                 success: function(data) {
                     $("body").html(data)
-                }
+                } 
             })
         })
-            
+    
     </script> -->
+
+    
+
+
 
 
 

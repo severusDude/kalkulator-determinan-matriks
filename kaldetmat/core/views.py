@@ -1,10 +1,14 @@
+import os
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponseBadRequest
 from django.views.decorators.http import require_http_methods
+from dotenv import load_dotenv
 from . import functions
+import requests
 
 # Create your views here.
+load_dotenv()
 
 
 @require_http_methods(['GET', ])
@@ -51,3 +55,18 @@ def calculate(request, result=[]):
             'n_cells': n_cells,
             'result': result
         })
+
+@require_http_methods(['POST'])
+def feedback(request):
+    token = os.getenv("TOKEN")
+    chat_id = os.getenv("CHAT_ID")
+
+    message = request.POST['feedback']
+    url = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={message}"
+
+    if(requests.get(url)): 
+        alert = "Terima kasih atas feedback Anda"
+    else:
+        alert = "Gagal mengirimkan feedback, silahkan coba lagi!"
+
+    return render(request, 'core/index.html', {"alert": alert})
