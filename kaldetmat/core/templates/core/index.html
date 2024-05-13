@@ -1,54 +1,54 @@
 {% extends 'core/base.html' %}  
+{% load static %}
 {% block title %}
     Home
 {% endblock title %}  
 
 
 {% block content %}  
+
 <!-- start carousel -->
-    <div id="default-carousel" class="relative w-full" data-carousel="slide" style="background-color: gray;">
-      <!-- Carousel wrapper -->
-      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-        <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="static/assets/carousel-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div style="background-color: rgb(181, 40, 171);" class="w-full h-full flex justify-center items-center flex-col p-20">
-            <h1 class="mdx:text-3xl text-xl">Determinan Matriks</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
-          </div>
-        </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div style="background-color: rgb(94, 40, 219);" class="w-full h-full flex justify-center items-center flex-col p-20">
-            <h1>Determinan Matriks</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
-          </div>
-        </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div style="background-color: rgb(45, 209, 40);" class="w-full h-full flex justify-center items-center flex-col p-20">
-            <h1>Determinan Matriks</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
-          </div>
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div style="background-color: rgb(25, 179, 226);" class="w-full h-full flex justify-center items-center flex-col p-20">
-            <h1>Determinan Matriks</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
-          </div>
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div style="background-color: rgb(220, 213, 23);" class="w-full h-full flex justify-center items-center flex-col p-20">
-            <h1>Determinan Matriks</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis quam necessitatibus ullam quod quibusdam ipsum ratione sint ducimus deleniti inventore repudiandae doloribus commodi, beatae animi tempora voluptatem pariatur? Possimus!</p>
-          </div>
-        </div>
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+  <!-- Carousel wrapper -->
+  <div class="relative h-56 overflow-hidden md:h-96 carousel-wrapper">    
+    <!-- Item 1 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">Do u now?</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Selamat datang di CalDetMat! Kami adalah alat yang dirancang untuk membantu Anda dalam perhitungan determinan matriks dengan mudah dan cepat.</p>
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Determinan matriks adalah nilai skalar yang memberikan informasi tentang sifat geometris dan aljabar matriks.</p>
+      </div>
+    </div>
+    
+    <!-- Item 3 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Jika semua unsur dari suatu baris (atau kolom) adalah nol, determinan matriks itu sama dengan nol.</p>
+      </div>
+    </div>
+    
+    <!-- Item 4 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Jika semua unsur dari suatu baris (atau kolom) adalah nol, kecuali satu unsur, determinannya sama dengan hasil kali unsur itu dengan kofaktornya.</p>
+      </div>
+    </div>
+    <!-- Item 5 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <div class="w-full h-full flex justify-center items-center flex-col md:p-20 p-10">
+        <h3 class="md:text-4xl sm:text-3xl text-2xl text-white font-bold">CalDetMat</h1>
+        <p class="text-sm md:text-base lg:text-lg xl:text-xl text-center text-white font-bold">Pertukaran dua baris atau dua kolom sembarang akan mengubah tanda determinan.</p>
+      </div>
+    </div>
+    
   </div>
   <!-- Slider indicators -->
   <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -58,127 +58,202 @@
     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
   </div>
-  <!-- Slider controls -->
-  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-      </svg>
-      <span class="sr-only">Previous</span>
-    </span>
-  </button>
-  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-          </svg>
-          <span class="sr-only">Next</span>
-      </span>
-       
-    </button>
 </div>
 <!-- end carousel -->
 
-<section class="mt-20">
-  <div class="w-11/12 flex justify-center items-center flex-col mx-auto md:11/12">
-    <h2 class="md:text-3xl font-bold dark:text-white font-bold dark:text-white text-2xl" style="font-family: 'Inter'; color: #000000;">About</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro reprehenderit magni sit quod, exercitationem nesciunt ipsam tenetur sed. Totam quidem perferendis perspiciatis culpa? Nam nisi dicta labore nemo dolores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nulla reprehenderit dolores exercitationem, nobis odit neque! In voluptatem hic eos placeat ab error debitis dolorum velit dolore voluptates, expedita tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nostrum rerum, debitis ex, laudantium ratione dolore nam, impedit similique dolores voluptatem. Aspernatur ad praesentium aliquid saepe? Unde voluptas sapiente vero!</p>
-    <a href="{% url 'core:calculate' %}?=2"><button class="btn mt-2 mx-auto">Calculator</button></a>
+<!-- alert -->
+<!-- success -->
+{% if alert %}
+  <div class="p-4 md:w-2/4 mx-auto mt-10 text-sm {{ alert.color }} rounded-lg {{ alert.backgroundColor }} text-center" role="alert">
+    <span class="font-medium">{{ alert.text }}</span>
   </div>
-</section>
+{% endif %}
+<!-- end alert -->
 
-<section class="mt-20">
-    <div class="flex flex-wrap">
-      <div class="md:w-9/12 p-10">
-        <h3 class="text-3xl font-bold sm:2xl">Kenapa Perlu Determinan Matriks</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sed rem itaque qui laborum vitae distinctio excepturi fugiat suscipit nulla quam reiciendis voluptates, id, deleniti debitis adipisci ipsa beatae numquam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel, reprehenderit officiis, omnis temporibus doloribus corrupti mollitia architecto in placeat nihil nam aut maxime voluptate non ratione est obcaecati velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, modi distinctio! Aperiam, blanditiis? Debitis voluptatum ea aliquid, repudiandae corporis rerum architecto inventore laboriosam beatae. Repellat laudantium distinctio optio dolor ad?</p>
-      </div>
-      <div class="md:w-3/12" style="background-color: #926852;"><img src="static/assets/study.jpg" alt=""></div>
+<!-- container -->
+<div class="md:container mx-auto flex-1 py-10">
+  <!-- materi 1 -->
+  <section class="mt-20">
+    <div class="w-3/4 md:w-11/12 lg:w-11/12 flex justify-center items-center flex-col mx-auto" data-aos="fade-down">
+      <h2 class="md:text-3xl font-bold dark:text-white font-bold dark:text-white text-2xl">Apa Itu Determinan Matriks?</h2>
+      <p>Di dalam bidang materi al jabar linear, determinan ialah sebuah nilai yang dapat dihitung dari unsur suatu matriks persegi. Dengan antarmuka yang intuitif, Anda dapat dengan cepat menghitung determinan matriks dengan berbagai ukuran, dari matriks 2x2 hingga matriks 3x3, serta matriks dengan ordo yang lebih besar. Dengan Kalkulator Determinan, Anda dapat menghemat waktu dan usaha dalam menyelesaikan masalah matematika yang melibatkan determinan matriks.</p>
     </div>
-</section>
+  </section>
+  <!-- end materi 1 -->
 
-<section class="mt-20">
-  <h3 class="m-3 text-3xl font-bold dark:text-white sm:text:center md:text-center" style="font-family: 'Inter'; color: #000000;">Langkah Penyelesaian Determinan Matriks</h3>
-  <div class="px-5 mx-auto flex flex-wrap justify-center">
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box px-8 pt-16 pb-16 relative">
-        <h1 class="title-font sm:text-2xl text-xl  mb-3">Matriks 2x2</h1>
-        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint eveniet impedit doloribus illo ullam aut est delectus, obcaecati similique consequuntur eum ab sed qui minima! Quidem earum exercitationem repudiandae nemo.</p>
-        <button class="btn">Coba</button>
+  <!-- materi 2 -->
+  <section class="mt-20">
+      <div class="flex flex-wrap">
+        <div class="md:w-8/12 p-10" data-aos="fade-right">
+          <h3 class="md:text-3xl font-bold text-2xl">Kenapa Perlu Determinan Matriks</h3>
+          <p>Belajar determinan matriks penting karena memiliki banyak aplikasi dalam berbagai bidang, seperti ilmu komputer, matematika dan fisika. Salah satu alasan utamanya adalah kemampuannya dalam menentukan apakah sebuah matriks bisa diinvers atau tidak, serta menyelesaikan sistem persamaan linear.
+          Determinan matriks juga penting dalam geometri, memungkinkan perhitungan luas, volume, dan properti geometris lainnya dari objek yang diwakili oleh matriks. Misalnya, dapat digunakan untuk menghitung volume prisma yang dibentuk oleh tiga vektor dalam tiga dimensi.
+          Belajar determinan matriks membuka pintu untuk memahami konsep lebih lanjut dalam aljabar linear, seperti eigenvalues, eigenvectors, dan transformasi linear. Hal ini menjadi dasar penting dalam memahami aplikasi matematika yang lebih kompleks, seperti pemrosesan sinyal, machine learning, dan analisis optimasi.
+          </p>
+        </div>
+        <div class="md:w-3/12 img flex items-center" data-aos="fade-left">
+          <img src="static/assets/study.jpg" alt="">
+        </div>
       </div>
-    </div>
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box px-8 pt-16 pb-16 relative">
-        <h1 class="title-font sm:text-2xl text-xl mb-3">Matriks 3x3</h1>
-        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, sequi vel obcaecati eius soluta cum voluptates qui saepe excepturi perspiciatis culpa reiciendis alias rem repudiandae harum odit laborum non molestiae!</p>
-        <button class="btn">Coba</button>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+  <!-- end materi 2 -->
 
-<!-- about us -->
-<section class="mt-20" id="about">
-  <h3 class="m-3 text-3xl font-bold dark:text-white text-center" style="font-family: 'Inter'; color: #000000;">About Us</h3>
-  <div class="w-3/4 px-5 mx-auto flex flex-wrap justify-center">
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box relative">
-        <!-- <img src="https://placehold.co/300x300/png" alt=""> -->
-        <img src="static/assets/1.2.png" alt="" class="member">
+  <!-- materi 3 -->
+  <section class="mt-20">
+    <h3 class="m-3 md:text-3xl text-2xl font-bold dark:text-white sm:text:center md:text-center" data-aos="fade-down">Langkah Penyelesaian Determinan Matriks</h3>
+    <div class="px-5 mx-auto flex flex-wrap justify-center">
+      <div class="h-full p-4 lg:w-1/3">
+        <div class="box px-8 py-6 relative" data-aos="fade-right">
+          <h1 class="title-font sm:text-2xl text-xl  mb-3">Matriks 2x2</h1>
+          <p class="mb-2">Terdiri dari dua baris dan dua kolom. Matriks ordo 2x2, determinannya dihitung dengan cara mengalikan diagonal utama dan mengurangkan hasil perkalian diagonal kedua. Rumus determinan matriks ordo 2x2 sangat sederhana dan mudah dipahami, sehingga sering digunakan dalam berbagai aplikasi matematika dan ilmu terapan.</p>
+          <a href="{% url 'core:calculate' %}">
+            <button class="btn">Coba</button>
+          </a>
+        </div>
       </div>
-      <!-- <div class="identity flex justify-center flex-col items-center">
-        <p>Luthfi Fajar</p>
-        <p>237006</p>
-      </div> -->
-    </div>
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box relative">
-        
-        <img src="static/assets/2.1.jpg" alt="" class="member">
-      </div>
-    </div>
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box relative">
-        <img src="static/assets/3.1.jpg" alt="" class="member">
+      <div class="h-full p-4 lg:w-1/3" data-aos="fade-left">
+        <div class="box px-8 py-6 relative h-100">
+          <h1 class="title-font sm:text-2xl text-xl mb-3">Matriks 3x3</h1>
+          <p class="mb-2">Matriks ordo 3x3 adalah matriks yang memiliki tiga baris dan tiga kolom. Determinannya dapat dihitung dengan metode ekspansi kofaktor, di mana setiap elemen matriks dikalikan dengan kofaktornya dan dijumlahkan. Hasilnya sering digunakan dalam menyelesaikan sistem persamaan linear dan pemodelan geometri.
+          </p>
+          <a href="{% url 'core:calculate' %}?n=3">
+            <button class="btn">Coba</button>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box relative">
-        <img src="static/assets/4.jpg" alt="" class="member">
+  </section>
+  <!-- end materi 3 -->
+
+  <!-- about us -->
+  <section class="mt-20" id="about">
+    <h3 class="m-3 md:text-3xl text-2xl font-bold dark:text-white text-center" data-aos="fade-down">About Us</h3>
+    <!-- members -->
+    <div class="w-3/4 px-5 mx-auto flex flex-wrap justify-center">
+      <div class="h-full p-4 lg:w-1/3" data-aos="fade-right">
+        <div class="box relative">
+          <img src="{% static 'assets/member-1.png' %}" class="member">
+          <div class="overlay">
+              <div class="w-full flex justify-center gap-2">
+                <a href="https://www.instagram.com/lutfidun">
+                  <img src="{% static 'assets/instagram.png' %}" width="40px" height="40px">
+                </a>
+                <a href="https://wa.me/628561245503">
+                  <img src="{% static 'assets/whatsapp.png' %}" width="40px" height="40px">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="information text-center">
+          <h6 class="text-lg font-bold dark:text-white">Luthfi Fajar Salladin</h3>
+          <p class="text-md font-bold text-gray-600">237006095</p>
+        </div>
+      </div>
+      <div class="h-full p-4 lg:w-1/3" data-aos="fade-right">
+        <div class="box relative">
+          <img src="{% static 'assets/member-2.jpg' %}" alt="" class="member">
+          <div class="overlay">
+            <div class="w-full flex justify-center gap-2">
+              <a href="https://instagram.com/fnkg28">
+                <img src="{% static 'assets/instagram.png' %}" width="40px" height="40px">
+              </a>
+              <a href="https://wa.me/62895701276670">
+                <img src="{% static 'assets/whatsapp.png' %}" width="40px" height="40px">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="information text-center">
+          <h3 class="text-lg font-bold dark:text-white">Febrian Nurjaman</h3>
+          <p class="text-md font-bold text-gray-600">237006096</p>
+        </div>
+      </div>
+      <div class="h-full p-4 lg:w-1/3" data-aos="fade-right">
+        <div class="box relative">
+          <img src="{% static 'assets/member-3.jpg' %}" class="member">
+          <div class="overlay">
+            <div class="w-full flex justify-center gap-2">
+              <a href="https://instagram.com/raflihykalnzd_">
+                <img src="{% static 'assets/instagram.png' %}" width="40px" height="40px">
+              </a>
+              <a href="https://wa.me/6287716714036">
+                <img src="{% static 'assets/whatsapp.png' %}" width="40px" height="40px">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="information text-center">
+          <h3 class="text-lg font-bold dark:text-white">Rafli Haiqal</h3>
+          <p class="text-md font-bold text-gray-600">237006099</p>
+        </div>
+      </div>
+      <div class="h-full p-4 lg:w-1/3" data-aos="fade-left">
+        <div class="box relative">
+          <img src="{% static 'assets/member-4.jpg' %}" class="member">
+          <div class="overlay">
+            <div class="w-full flex justify-center gap-2">
+              <a href="https://instagram.com/bunganm._">
+                <img src="{% static 'assets/instagram.png' %}" width="40px" height="40px">
+              </a>
+              <a href="https://wa.me/6285156056450">
+                <img src="{% static 'assets/whatsapp.png' %}" width="40px" height="40px">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="information text-center">
+          <h3 class="text-lg font-bold dark:text-white">Bunga Nur Munawaroh</h3>
+          <p class="text-md font-bold text-gray-600">237006110</p>
+        </div>
+      </div>
+      <div class="h-full p-4 lg:w-1/3" data-aos="fade-left">
+        <div class="box relative">
+          <img src="{% static 'assets/member-5.jpg' %}" class="member">
+          <div class="overlay">
+            <div class="w-full flex justify-center gap-2">
+              <a href="https://instagram.com/iqbalmutaqin__">
+                <img src="{% static 'assets/instagram.png' %}" width="40px" height="40px">
+              </a>
+              <a href="https://wa.me/6285282068891">
+                <img src="{% static 'assets/whatsapp.png' %}" width="40px" height="40px">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="information text-center">
+          <h3 class="text-lg font-bold dark:text-white">Iqbal Mutaqin</h3>
+          <p class="text-md font-bold text-gray-600">237006120</p>
+        </div>
+      </div>
+      
+    </div>
+    <!-- end members -->
+  </section>
+
+  <!-- feedback -->
+  <section class="mt-20" id="feedback">
+    <div data-aos="fade-up">
+      <h3 class="m-3 md:text-3xl text-2xl font-bold dark:text-white text-center" style="font-family: 'Kulim Park'; color: #000000;">Feedback</h3>
+      
+      <div class="w-2/3 p-7 h-full box mx-auto">
+        <p>Beritahu kami tentang pengalaman anda saat menggunakan . Kritik dan saran anda akan sangat membantu kami.</p>
+        <form action="{% url 'core:feedback' %}" method="post">
+          {% csrf_token %}
+          <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+            <label for="comment" class="sr-only">Your comment</label>
+            <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." name="feedback" required ></textarea>
+          </div>
+          <button class="btn" type="submit">Kirim</button>
+        </form>
       </div>
     </div>
-    <div class="h-full p-4 lg:w-1/3">
-      <div class="box relative">
-        <img src="static/assets/5.1.jpg" alt="" class="member">
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<!-- feedback -->
-<section class="mt-20">
-  <h3 class="m-3 text-3xl font-bold dark:text-white text-center" style="font-family: 'Inter'; color: #000000;">Feedback</h3>
-  
-  <div class="w-2/3 p-7 h-full box mx-auto">
-    <p>Beritahu kami tentang pengalaman anda saat menggunakan . Kritik dan saran anda akan sangat membantu kami.</p>
-    <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-      <label for="comment" class="sr-only">Your comment</label>
-      <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required ></textarea>
-    </div>
-    <button class="btn">Kirim</button>
-  </div>
-
-</section>
 
 
 
-
-
-
-
-
+  </section>
+  <!-- end feedback -->
 
 </div>
+<!-- end container -->
 
 {% endblock content %}
