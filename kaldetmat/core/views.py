@@ -67,8 +67,16 @@ def feedback(request):
     # send message with telegram API
     url = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={message}"
     if(requests.get(url)): 
-        alert = "Terima kasih atas feedback Anda"
+        alert = {
+            "text": "Terima kasih atas feedback Anda",
+            "color": "text-blue-800",
+            "backgroundColor": "bg-blue-50"
+        }
     else:
-        alert = "Gagal mengirimkan feedback, silahkan coba lagi!"
+        alert = {
+            "text": "Gagal mengirimkan feedback, silahkan coba lagi!",
+            "color": "text-red-800",
+            "backgroundColor": "bg-red-50"
+        }
 
     return render(request, 'core/index.html', {"alert": alert})
