@@ -6,7 +6,6 @@
 {% block content %} 
     <div class="md:container mx-auto flex-1 py-10">
         <section class="mb-10">
-
             <!-- Main modal -->
             <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                 <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -48,90 +47,29 @@
                     </form>
                 </div>
 
-                
-                
-
             <form action="{% url 'core:calculate' %}?n={{ n }}" id="formData" method="post">
                 {% csrf_token %}
-                    <div class="box md:w-2/4 p-3 mx-auto w-11/12" id="show-calculator">
-                        <div class="flex items-center mb-2">
-                            <input type="text" name="{{ i }}" class="w-full" disabled placeholder="determinant result" {% if result %}value="{{ result }}"{% endif %}>
-                        </div>
-                        <div class="pb-6 grid grid-cols-{{ n }} gap-4 justify-items-center" id="show-grid" >
+                <div class="box md:w-2/4 p-3 mx-auto w-11/12" id="show-calculator">
+                    <!-- input ordo matriks -->
+                    <div class="flex items-center mb-2">
+                        <input type="text" name="{{ i }}" class="w-full" disabled placeholder="determinant result" {% if result %}value="{{ result }}"{% endif %}>
+                    </div>
+                    <!-- end input ordo matriks -->
+
+                    <!-- print rows and cols base ordo input user -->
+                    <div class="pb-6 grid grid-cols-{{ n }} gap-4 justify-items-center" id="show-grid" >
                         {% for i in n_cells %}
                         <div class="w-full">
                             <input type="number" name="{{ i }}" class="w-full">
                         </div>
                         {% endfor %}
-                </div>
+                    </div>
+                    <!-- end print rows and cols base ordo input user -->
 
-                <div class="" id="hasil"></div>
-                <button class="btn" id="submit" type="submit">Hitung</button>
+                    <button class="btn" id="submit" type="submit">Hitung</button>
                 </div>
-
-                </form>
-            </div>
+            </form>
         </section>  
     </div>
-
-
-    <!-- script buat ajax agar formnya bisa dianimasikan secara interaktif -->
-    <!-- masih ada beberapa bug -->
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        let confirm= document.getElementById("confirm");
-        let showCalculator = document.getElementById("show-calculator");
-        let ordo = document.getElementById("n-ordo")
-        
-        ===== input ordo matriks =======
-        ======= GET ===========
-        $("#confirm").click(function(e) {
-            e.preventDefault();
-
-            // mengecek apakah ordo yang dimasukan tidak kosong
-            if(ordo.value !== "") {
-                // tampilkan kalkulator beserta ordonya
-                showCalculator.classList.remove("calculator-hidden");
-                showCalculator.classList.add("calculator-show")
-            };
-
-            $.ajax({
-                type: "GET",
-                url: "/calculate",
-                data: {
-                    n: $("#n-ordo").val()
-                },
-                success: function(data) {
-                    $("*").replaceWith(data)
-                } 
-            })
-        })
-
-        ==== input matriks =====
-        ======= POST ===========
-        $("#formData").click(function(e) {
-            e.preventDefault();
-            let form = document.getElementById("formData");
-            let formData = new FormData(form);
-
-            $.ajax({
-                url: "{% url 'core:calculate' %}?n={{ n }}",
-                type: "POST",
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(data) {
-                    $("body").html(data)
-                } 
-            })
-        })
-    
-    </script> -->
-
-    
-
-
-
-
 
 {% endblock content %}
