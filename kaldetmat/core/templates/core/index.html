@@ -100,7 +100,7 @@
 
   <!-- materi 3 -->
   <section class="mt-20">
-    <h3 class="m-3 md:text-3xl text-2xl font-bold dark:text-white sm:text:center md:text-center" data-aos="fade-down">Langkah Penyelesaian Determinan Matriks</h3>
+    <h3 class="m-3 md:text-3xl text-2xl font-bold sm:text:center md:text-center" data-aos="fade-down">Langkah Penyelesaian Determinan Matriks</h3>
     <div class="px-5 mx-auto flex flex-wrap justify-center">
       <div class="h-full p-4 lg:w-1/3">
         <div class="box px-8 py-6 relative" data-aos="fade-right">
@@ -145,7 +145,7 @@
           </div>
         </div>
         <div class="information text-center">
-          <h6 class="text-lg font-bold dark:text-white">Luthfi Fajar Salladin</h3>
+          <h6 class="text-lg font-bold">Luthfi Fajar Salladin</h3>
           <p class="text-md font-bold text-gray-600">237006095</p>
         </div>
       </div>
@@ -164,7 +164,7 @@
           </div>
         </div>
         <div class="information text-center">
-          <h3 class="text-lg font-bold dark:text-white">Febrian Nurjaman</h3>
+          <h3 class="text-lg font-bold">Febrian Nurjaman</h3>
           <p class="text-md font-bold text-gray-600">237006096</p>
         </div>
       </div>
@@ -183,7 +183,7 @@
           </div>
         </div>
         <div class="information text-center">
-          <h3 class="text-lg font-bold dark:text-white">Rafli Haiqal</h3>
+          <h3 class="text-lg font-bold">Rafli Haiqal</h3>
           <p class="text-md font-bold text-gray-600">237006099</p>
         </div>
       </div>
@@ -202,7 +202,7 @@
           </div>
         </div>
         <div class="information text-center">
-          <h3 class="text-lg font-bold dark:text-white">Bunga Nur Munawaroh</h3>
+          <h3 class="text-lg font-bold">Bunga Nur Munawaroh</h3>
           <p class="text-md font-bold text-gray-600">237006110</p>
         </div>
       </div>
@@ -221,7 +221,7 @@
           </div>
         </div>
         <div class="information text-center">
-          <h3 class="text-lg font-bold dark:text-white">Iqbal Mutaqin</h3>
+          <h3 class="text-lg font-bold">Iqbal Mutaqin</h3>
           <p class="text-md font-bold text-gray-600">237006120</p>
         </div>
       </div>
@@ -233,15 +233,15 @@
   <!-- feedback -->
   <section class="mt-20" id="feedback">
     <div data-aos="fade-up">
-      <h3 class="m-3 md:text-3xl text-2xl font-bold dark:text-white text-center" style="font-family: 'Kulim Park'; color: #000000;">Feedback</h3>
+      <h3 class="m-3 md:text-3xl text-2xl font-bold text-center" style="font-family: 'Kulim Park'; color: #000000;">Feedback</h3>
       
       <div class="w-2/3 p-7 h-full box mx-auto">
         <p>Beritahu kami tentang pengalaman anda saat menggunakan . Kritik dan saran anda akan sangat membantu kami.</p>
         <form action="{% url 'core:feedback' %}" method="post">
           {% csrf_token %}
-          <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+          <div class="px-4 py-2 bg-white rounded-t-lg">
             <label for="comment" class="sr-only">Your comment</label>
-            <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." name="feedback" required ></textarea>
+            <textarea id="comment" rows="4" class="w-full px-0 text-sm text-gray-900 border-0 focus:ring-0" placeholder="Write a comment..." name="feedback" required ></textarea>
           </div>
           <button class="btn" type="submit">Kirim</button>
         </form>
