@@ -15,11 +15,12 @@ body {
     font-family: 'Kulim Park';
   }
   
-  nav {
+
+nav {
     background-color: #FFECEC;
-  }
+}
   
-  nav ul li a {
+nav ul li a {
   color: #4a4646;
   transition: ease-in .1s;
 }
@@ -31,6 +32,7 @@ nav ul li a.active {
 nav ul li a:hover {
   color: #fe965c !important;
 }
+
 nav ul li a {
   color: #4a4646;
   transition: ease-in .1s;
