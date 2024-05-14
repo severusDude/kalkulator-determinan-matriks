@@ -3,7 +3,7 @@ Kalkulator untuk menghitung determinan matriks untuk menyelesaikan tugas mata ku
 
 ## Features
 
-- Menghitung determinan matrix ordo 2 dan ordo 3
+- Menghitung determinan matrix ordo n
 
 ## Getting Started
 
@@ -32,10 +32,12 @@ Add additional notes to deploy this on a live system -->
 ## Built With
 
   - [Django](https://www.djangoproject.com/) - Django digunakan sebagai monolith
+  - [Tailwind](https://tailwindcss.com) - Tailwind digunakan sebagai styling
 
 ## Authors
 
 - [severusDude](https://github.com/severusDude)
+- [iqbal-mn694](https://github.com/iqbal-mn694)
 
 ## License
 
