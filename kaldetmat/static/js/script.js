@@ -8,7 +8,7 @@ function activeNav(selector) {
     document.querySelector(selector).classList.add("active")
 }
 
-// show active navbar
+// show active page in navbar
 if(pathName === "/") {
     activeNav(".home");
     activeNav(".footer-home-nav");
